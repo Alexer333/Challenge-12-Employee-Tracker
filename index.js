@@ -16,14 +16,53 @@ function init() {
 function loadMainPrompts() {
   prompt([
     // TODO- Create first question user will see- "What would you like to do?"
+    {
+      type: "list",
+      choices: [
+        "Add Department",
+        "Add Role", 
+        "Add Employee",
+        "View Employees",
+        "View Departments", 
+        "View Roles", 
+        "Update Employee Roles",
+        "Quit"
+      ],
+      message: "What would you like to do?",
+      name: "choice"
+  },
   ]).then((res) => {
     // TODO- Create a variable to store the user's choice
+    var string = loadMainPrompts(answer);
     // TODO- Create a switch statement to call the appropriate function depending on what the user chose
+    Switch (select) {
+      case "Add Department",
+    }
   });
 }
 
+// TODO- Create a function to Add a department
+
+// TODO- Create a function to Add a role
+
+// TODO- Create a function to Add an employee
+
 // TODO- Create a function to View all employees
 function viewEmployees() {}
+
+// TODO- Create a function to View all deparments
+
+// TODO- Create a function to View all roles
+
+// TODO- Create a function to Update an employee's role
+
+
+
+
+
+// BONUS- Create a function to Delete a department
+
+// BONUS- Create a function to View all departments and show their total utilized department budget
 
 // BONUS- Create a function to View all employees that belong to a department
 
@@ -31,25 +70,9 @@ function viewEmployees() {}
 
 // BONUS- Create a function to Delete an employee
 
-// TODO- Create a function to Update an employee's role
-
 // BONUS- Create a function to Update an employee's manager
 
-// TODO- Create a function to View all roles
-
-// TODO- Create a function to Add a role
-
 // BONUS- Create a function to Delete a role
-
-// TODO- Create a function to View all deparments
-
-// TODO- Create a function to Add a department
-
-// BONUS- Create a function to Delete a department
-
-// BONUS- Create a function to View all departments and show their total utilized department budget
-
-// TODO- Create a function to Add an employee
 
 // Exit the application
 function quit() {
